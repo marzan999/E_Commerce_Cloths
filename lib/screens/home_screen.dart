@@ -63,7 +63,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         onPressed: () {
                           icon == FontAwesomeIcons.house
                               ? pageController.jumpToPage(0)
-                              : pageController.jumpToPage(1);
+                              : icon == FontAwesomeIcons.compass
+                                  ? pageController.jumpToPage(1)
+                                  : icon == FontAwesomeIcons.cartShopping
+                                      ? pageController.jumpToPage(2)
+                                      : pageController.jumpToPage(3);
                         },
                         icon: Icon(icon, color: Colors.white60, size: 22),
                       ),
